@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1223873982 source:c:\users\yshuan\desktop\cg\cghw1a\cghw1a\font.c
+	"font.h"
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+
+935251200 c:\users\yshuan\desktop\cg\cghw1a\cghw1a\font.h
+	<windows.h>
+	<GL/gl.h>
+
