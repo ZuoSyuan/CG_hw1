@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="default" />
-	<File name="GLee.c" open="1" top="0" tabpos="1">
-		<Cursor position="1553" topLine="27" />
+	<File name="GLee.c" open="0" top="0" tabpos="1">
+		<Cursor position="1553" topLine="48" />
 	</File>
-	<File name="hw1.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="5126" topLine="246" />
+	<File name="hw1.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="4799" topLine="196" />
 	</File>
-	<File name="swgl.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="282" topLine="0" />
+	<File name="swgl.cpp" open="1" top="1" tabpos="2">
+		<Cursor position="426" topLine="3" />
 	</File>
-	<File name="swgl.h" open="1" top="1" tabpos="4">
-		<Cursor position="1139" topLine="9" />
+	<File name="swgl.h" open="1" top="0" tabpos="3">
+		<Cursor position="521" topLine="11" />
 	</File>
 </CodeBlocks_layout_file>

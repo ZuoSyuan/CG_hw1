@@ -67,7 +67,6 @@ void SwglLine(GLdouble x1, GLdouble y1, GLdouble z1, GLdouble x2, GLdouble y2, G
 	//implement the opengl pipeline here
 	swTransformation(h1, w1);
 	swTransformation(h2, w2);
-
 	//draw the 2D line
 	glBegin(GL_LINES);
 		//glColor3fv(colors[index1]);
@@ -177,24 +176,23 @@ void softPath(void)
 	glLoadIdentity();
 
 	glColor3f(1, 0, 0);
-	OpenglLine(winWidth/2, 0, 0, winWidth, winHeight, 0);
-
+	//OpenglLine(winWidth/2, 0, 0, winWidth, winHeight, 0);
 
 	//
 	//replace the opengl function in openglPath() to sotfgl
     //
-/*
+
 	//view transform
-	swViewport(winWidth/2, 0, winWidth/2, winHeight);
+	swViewport(winWidth/2, 0, winWidth/2, winHeight);   //glViewport(winWidth/2, 0, winWidth/2, winHeight);
 
-    swMatrixMode(GL_PROJECTION);
-    swLoadIdentity();
+    swMatrixMode(GL_PROJECTION);    //glMatrixMode(GL_PROJECTION);
+    swLoadIdentity();   //glLoadIdentity();
 	//swOrtho(-2.0, 2.0, -2.0, 2.0, -3.0, 3.0);
-	swuPerspective(60, (GLfloat)(winWidth*0.5)/winHeight, 0.1, 25);
+	swuPerspective(60, (GLfloat)(winWidth*0.5)/winHeight, 0.1, 25); //gluPerspective(60, (GLfloat)(winWidth*0.5)/winHeight, 0.1, 25);
 
-    swMatrixMode(GL_MODELVIEW);
-	swLoadIdentity();
-	swuLookAt(5, 5, 20, 0, 5, 0, 0, 1, 0);
+    swMatrixMode(GL_MODELVIEW); //glMatrixMode(GL_MODELVIEW);
+	swLoadIdentity();   //glLoadIdentity();
+	swuLookAt(5, 5, 20, 0, 5, 0, 0, 1, 0);  //gluLookAt(5, 5, 20, 0, 5, 0, 0, 1, 0);
 
 	//world coordinate
 	glColor3f(1, 0, 0);
@@ -205,36 +203,32 @@ void softPath(void)
 	SwglLine(0, 0, 0, 0, 0, 1);
 
 	//multiple trackball matrix
-	swMultMatrixd(TRACKM);
+	swMultMatrixd(TRACKM);          //glMultMatrixd(TRACKM);
 
-	swPushMatrix();
-		swScaled(1, 2, 1);
+	swPushMatrix();                 //glPushMatrix();
+		swScaled(1, 2, 1);              //glScaled(1, 2, 1);
 		glColor3f(1, 0, 0);
 		swWireCube();
-	swPopMatrix();
+	swPopMatrix();                  //glPopMatrix();
 
+	swTranslated(0, 2, 0);          //glTranslated(0, 2, 0);
+	swRotated(Angle1, 0, 0, 1);     //glRotated(Angle1, 0, 0, 1);
+	swRotated(Angle2, 0, 1, 0);     //glRotated(Angle2, 0, 1, 0);
+    swPushMatrix();                 //glPushMatrix();
+        swTranslated(0, 2, 0);          //glTranslated(0, 2, 0);
+        swScaled(1, 2, 1);              //glScaled(1, 2, 1);
+        glColor3f(0, 1, 0);
+        swWireCube();
+    swPopMatrix();                  //glPopMatrix();
 
-	swTranslated(0, 2, 0);
-	swRotated(Angle1, 0, 0, 1);
-	swRotated(Angle2, 0, 1, 0);
-		swPushMatrix();
-			swTranslated(0, 2, 0);
-			swScaled(1, 2, 1);
-			glColor3f(0, 1, 0);
-			swWireCube();
-		swPopMatrix();
-
-		swTranslated(0, 4, 0);
-		swRotated(Angle1, 0, 0, 1);
-
-		swPushMatrix();
-			swTranslated(0, 2, 0);
-			swScaled(1, 2, 1);
-			glColor3f(0, 0, 1);
-			swWireCube();
-		swPopMatrix();
-*/
-
+    swTranslated(0, 4, 0);          //glTranslated(0, 4, 0);
+    swRotated(Angle1, 0, 0, 1);     //glRotated(Angle1, 0, 0, 1);
+    swPushMatrix();                 //glPushMatrix();
+        swTranslated(0, 2, 0);          //glTranslated(0, 2, 0);
+        swScaled(1, 2, 1);              //glScaled(1, 2, 1);
+        glColor3f(0, 0, 1);
+        swWireCube();
+    swPopMatrix();                  //glPopMatrix();
 }
 
 void openglPath(void)
@@ -272,22 +266,21 @@ void openglPath(void)
 	glTranslated(0, 2, 0);
 	glRotated(Angle1, 0, 0, 1);
 	glRotated(Angle2, 0, 1, 0);
-		glPushMatrix();
-			glTranslated(0, 2, 0);
-			glScaled(1, 2, 1);
-			glColor3f(0, 1, 0);
-			glWireCube();
-		glPopMatrix();
+    glPushMatrix();
+        glTranslated(0, 2, 0);
+        glScaled(1, 2, 1);
+        glColor3f(0, 1, 0);
+        glWireCube();
+    glPopMatrix();
 
-		glTranslated(0, 4, 0);
-		glRotated(Angle1, 0, 0, 1);
-
-		glPushMatrix();
-			glTranslated(0, 2, 0);
-			glScaled(1, 2, 1);
-			glColor3f(0, 0, 1);
-			glWireCube();
-		glPopMatrix();
+    glTranslated(0, 4, 0);
+    glRotated(Angle1, 0, 0, 1);
+    glPushMatrix();
+        glTranslated(0, 2, 0);
+        glScaled(1, 2, 1);
+        glColor3f(0, 0, 1);
+        glWireCube();
+    glPopMatrix();
 
 }
 

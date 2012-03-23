@@ -9,3 +9,39 @@
 	<windows.h>
 	<GL/gl.h>
 
+1320239366 source:c:\users\yshuan\desktop\cg\cghw1a\cghw1a\hw1.cpp
+	<math.h>
+	<stdlib.h>
+	"GLee.h"
+	<GLUT/glut.h>
+	<windows.h>
+	<GL/glut.h>
+	"swgl.h"
+	"font.h"
+
+1223307112 c:\users\yshuan\desktop\cg\cghw1a\cghw1a\glee.h
+	<windows.h>
+	<GL/gl.h>
+	<OpenGL/gl.h>
+	<GL/gl.h>
+	<GL/glx.h>
+	<stddef.h>
+
+1320890875 c:\users\yshuan\desktop\cg\cghw1a\cghw1a\swgl.h
+	<GLUT/glut.h>
+	<GL/glut.h>
+	<cstdio>
+
+1322631273 source:c:\users\yshuan\desktop\cg\cghw1a\cghw1a\swgl.cpp
+	"swgl.h"
+	<stack>
+	<cstring>
+	<cmath>
+
+1223307112 source:c:\users\yshuan\desktop\cg\cghw1a\cghw1a\glee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"GLee.h"
+	<Carbon/Carbon.h>
+

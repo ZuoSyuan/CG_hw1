@@ -5,8 +5,10 @@
 #include <GLUT/glut.h>
 #else
 #include <GL/glut.h>
+
 #endif
 
+#include <cstdio>
 //implement the following function call to archive the opengl pipeline
 
 
@@ -16,9 +18,9 @@ void swScaled(GLdouble x, GLdouble y, GLdouble z);
 void swRotated(GLdouble angle, GLdouble x, GLdouble y, GLdouble z);
 
 void swMatrixMode(GLenum mode);
-void swLoadIdentitd(void);
+void swLoadIdentity(void);
 void swLoadMatrixf(const GLdouble * m);
-void swMultMatrixf(const GLdouble * m);
+void swMultMatrixd(const GLdouble * m);
 void swPushMatrix(void);
 void swPopMatrix(void);
 
